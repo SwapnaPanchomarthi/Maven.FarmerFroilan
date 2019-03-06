@@ -1,4 +1,6 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.Storage;
+
+import com.zipcodewilmington.froilansfarm.CropRow;
 
 import java.util.ArrayList;
 
