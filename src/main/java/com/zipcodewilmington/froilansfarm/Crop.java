@@ -2,7 +2,8 @@ package com.zipcodewilmington.froilansfarm;
 
 public class Crop extends Produce {
     private Boolean hasBeenFertilized;
+    private Boolean hasBeenHarvested;
 
-    public void yield(Edible edible) {
+    public Edible yield(Edible edible) {
     }
 }
