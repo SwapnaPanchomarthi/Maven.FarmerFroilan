@@ -12,6 +12,4 @@ public class Farm {
         this.stable = stable;
         this.farmHouse = farmHouse;
     }
-
-    asd;lfkjasd;lkf
 }
