@@ -17,7 +17,7 @@ public class HorseTest {
     @Test
     public void extendsAnimalTest(){
         //Given
-        this.horse = new Horse(null, null);
+        this.horse = Horse.createHorse(null, null);
 
         //Then
         Assert.assertTrue(horse instanceof Animal);
@@ -26,7 +26,7 @@ public class HorseTest {
     @Test
     public void implementsRideableTest(){
         //Given
-        this.horse = new Horse(null, null);
+        this.horse = Horse.createHorse(null, null);
 
         //Then
         Assert.assertTrue(horse instanceof Rideable);
@@ -35,7 +35,7 @@ public class HorseTest {
     @Test
     public void setNameTest(){
         //Given
-        this.horse = new Horse(null, null);
+        this.horse = Horse.createHorse(null, null);
 
         //When
         horse.setName("Seabiscuit");
@@ -49,7 +49,7 @@ public class HorseTest {
     @Test
     public void setEnergyTest(){
         //Given
-        this.horse = new Horse(null, null);
+        this.horse = Horse.createHorse(null, null);
 
         //When
         horse.setEnergy(10);
@@ -63,7 +63,7 @@ public class HorseTest {
     @Test
     public void eatTest(){
         //Given
-        this.horse = new Horse(null, null);
+        this.horse = Horse.createHorse(null, null);
         Edible earCorn = new EarCorn();
         horse.setEnergy(10);
 
@@ -79,7 +79,7 @@ public class HorseTest {
     @Test
     public void rideTest(){
         //Given
-        this.horse = new Horse(null, null);
+        this.horse = Horse.createHorse(null, null);
         horse.setName("Seabiscuit");
         horse.setEnergy(10);
 
@@ -98,7 +98,7 @@ public class HorseTest {
     @Test
     public void makeNoiseTest(){
         //Given
-        this.horse = new Horse(null, null);
+        this.horse = Horse.createHorse(null, null);
 
         //When
         String actual = horse.makeNoise();

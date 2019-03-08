@@ -10,9 +10,13 @@ public class Farmer extends Person implements Rider, Botanist {
     String name;
     Integer energy;
 
-    public Farmer(String name, Integer energy){
+    private Farmer(String name, Integer energy){
         this.name = name;
         this.energy = energy;
+    }
+
+    public static Farmer createFarmer(String name, Integer energy) {
+        return new Farmer(name, energy);
     }
 
     public void plant(Crop crop) {
