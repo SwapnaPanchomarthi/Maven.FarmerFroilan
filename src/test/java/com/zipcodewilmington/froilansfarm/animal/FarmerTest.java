@@ -26,18 +26,31 @@ public class FarmerTest {
     public void mount() {
         //Given
         Rideable rideable = new Tractor();
-        String expected = "Farmer mounted ";
+        String expected = "Farmer mounted "+rideable;
 
         //When
-       //String actual= (farmer.mount(rideable)).toString();
+       String actual= (farmer.mount(rideable)).toString();
 
 
         //Then
-       // Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
 
     }
 
     @Test
     public void dismount() {
+
+        //Given
+        Rideable rideable = new Tractor();
+        String expected = "Farmer dismounted "+rideable;
+
+        //When
+        String actual= (farmer.dismount(rideable)).toString();
+
+
+        //Then
+        Assert.assertEquals(expected, actual);
+
     }
+
 }
