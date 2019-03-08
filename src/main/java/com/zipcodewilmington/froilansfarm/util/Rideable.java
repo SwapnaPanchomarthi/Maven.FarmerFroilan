@@ -1,5 +1,9 @@
 package com.zipcodewilmington.froilansfarm.util;
 
 public interface Rideable {
-    String ride(Rideable rideable);
+
+   /* void ride(Integer miles);
+
+    Integer getMiles();*/
+   String ride(Rideable rideable);
 }

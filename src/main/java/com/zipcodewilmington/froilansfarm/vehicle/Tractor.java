@@ -17,6 +17,7 @@ public class Tractor implements FarmVehicle {
         return "riding tractor";
     }
 
+
     public boolean harvest(Crop crop) {
         return true;
     }

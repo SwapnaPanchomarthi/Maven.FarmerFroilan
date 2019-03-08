@@ -6,15 +6,20 @@ import com.zipcodewilmington.froilansfarm.util.Rideable;
 import com.zipcodewilmington.froilansfarm.util.Rider;
 
 public class Farmer extends Person implements Rider, Botanist {
+
     public void plant(Crop crop) {
+        crop.plant();
 
     }
 
-    public void mount(Rideable rideable) {
+    public String mount(Rideable rideable) {
+
+     return "Farmer mounted "+rideable;
 
     }
 
-    public void dismount(Rideable rideable) {
+    public String dismount(Rideable rideable) {
+        return "Farmer dismounted "+rideable;
 
     }
 }

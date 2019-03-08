@@ -18,4 +18,8 @@ public abstract class Storage<SomeType> {
         return list.get(index);
     }
 
+    Integer getSize(){
+        return list.size();
+    }
+
 }
