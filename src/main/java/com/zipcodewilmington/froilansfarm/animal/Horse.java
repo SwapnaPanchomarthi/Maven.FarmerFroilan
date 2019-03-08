@@ -7,7 +7,7 @@ public class Horse extends Animal implements Rideable {
     String name;
     Integer energy;
 
-    private Horse(String name, Integer energy){
+    public Horse(String name, Integer energy){
         this.name = name;
         this.energy = energy;
     }
