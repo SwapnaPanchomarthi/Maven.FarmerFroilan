@@ -6,7 +6,11 @@ import com.zipcodewilmington.froilansfarm.util.Rideable;
 
 public class Tractor implements FarmVehicle {
 
-    public Tractor() {
+    private Tractor() {
+    }
+
+    public static Tractor createTractor() {
+        return new Tractor();
     }
 
     public String makeNoise() {

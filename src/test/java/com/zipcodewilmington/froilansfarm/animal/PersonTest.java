@@ -1,12 +1,8 @@
 package com.zipcodewilmington.froilansfarm.animal;
 
 import com.zipcodewilmington.froilansfarm.produce.Egg;
-import com.zipcodewilmington.froilansfarm.produce.Tomato;
-import com.zipcodewilmington.froilansfarm.util.Edible;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class PersonTest {
 
@@ -28,7 +24,7 @@ public class PersonTest {
     @Test
     public void eatTest(){
         //Given
-        Person person = new Farmer(null, 10);
+        Person person = Farmer.createFarmer(null, 10);
         Egg egg = new Egg();
 
         //When
