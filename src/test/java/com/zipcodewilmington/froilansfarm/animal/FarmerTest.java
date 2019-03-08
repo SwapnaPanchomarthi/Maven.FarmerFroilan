@@ -3,13 +3,10 @@ package com.zipcodewilmington.froilansfarm.animal;
 import com.zipcodewilmington.froilansfarm.produce.Crop;
 import com.zipcodewilmington.froilansfarm.produce.Egg;
 import com.zipcodewilmington.froilansfarm.produce.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.util.Produce;
 import com.zipcodewilmington.froilansfarm.util.Rideable;
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class FarmerTest {
 
@@ -17,7 +14,7 @@ public class FarmerTest {
 
     @Test
     public void plant() {
-        Crop crop = new TomatoPlant();
+        Crop crop = TomatoPlant.createTomatoPlant();
         farmer.plant(crop);
 
         Assert.assertTrue(crop.isPlanted());
