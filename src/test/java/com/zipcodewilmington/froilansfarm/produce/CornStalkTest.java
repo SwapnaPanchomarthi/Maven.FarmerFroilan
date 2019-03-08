@@ -14,12 +14,12 @@ public class CornStalkTest {
     public void yield() {
         //Given
         this.cornStalk = new CornStalk();
+        EarCorn earCorn;
 
         //When
-        Edible acutal = cornStalk.yield();
+        earCorn = cornStalk.yield();
 
         //Then
-        Edible expected = new EarCorn();
-        Assert.assertEquals(expected, acutal);
+        Assert.assertNotNull(earCorn);
     }
 }
