@@ -85,5 +85,7 @@ public class HorseTest {
         //When
         horse.ride();
         String expected = "You rode " + horse.getName();
+
+        Assert;
     }
 }
