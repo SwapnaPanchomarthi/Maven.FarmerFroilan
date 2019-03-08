@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.animal;
 
 import com.zipcodewilmington.froilansfarm.produce.Crop;
+import com.zipcodewilmington.froilansfarm.produce.Egg;
 import com.zipcodewilmington.froilansfarm.produce.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.util.Produce;
 import com.zipcodewilmington.froilansfarm.util.Rideable;
@@ -12,7 +13,7 @@ import static org.junit.Assert.*;
 
 public class FarmerTest {
 
-    Farmer farmer =new Farmer();
+    Farmer farmer =new Farmer(null, null);
 
     @Test
     public void plant() {
@@ -29,7 +30,7 @@ public class FarmerTest {
         String expected = "Farmer mounted "+rideable;
 
         //When
-       String actual= (farmer.mount(rideable)).toString();
+       String actual= (farmer.mount(rideable));
 
 
         //Then
@@ -45,7 +46,7 @@ public class FarmerTest {
         String expected = "Farmer dismounted "+rideable;
 
         //When
-        String actual= (farmer.dismount(rideable)).toString();
+        String actual= (farmer.dismount(rideable));
 
 
         //Then
@@ -53,4 +54,34 @@ public class FarmerTest {
 
     }
 
+    @Test
+    public void constructorTest(){
+        //Given
+        farmer.setName("Froilan");
+        farmer.setEnergy(10);
+
+        //When
+        String actualName = farmer.getName();
+
+        //Then
+        String expectedName = "Froilan";
+        Assert.assertNotNull(farmer);
+        Assert.assertEquals(expectedName, actualName);
+    }
+
+    @Test
+    public void eatTest(){
+        //Given
+        farmer.setName("Froilan");
+        farmer.setEnergy(10);
+        Egg egg = new Egg();
+
+        //When
+        farmer.eat(egg);
+        Integer actualEnergy = farmer.getEnergy();
+
+        //Then
+        Integer expectedEnergy = 20;
+        Assert.assertEquals(expectedEnergy, actualEnergy);
+    }
 }

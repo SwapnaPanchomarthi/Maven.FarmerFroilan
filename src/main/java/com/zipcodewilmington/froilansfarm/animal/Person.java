@@ -9,6 +9,7 @@ public abstract class Person extends Animal implements NoiseMaker, Eater {
         return null;
     }
 
-    public void eat(Edible edible) {
+    public String eat(Edible edible) {
+        return new Farmer(null, null) + " ate " + edible;
     }
 }

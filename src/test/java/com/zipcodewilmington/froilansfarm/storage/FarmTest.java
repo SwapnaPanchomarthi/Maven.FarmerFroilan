@@ -6,14 +6,17 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 public class FarmTest {
+    Farm farm;
+    ArrayList<Stable> stables;
+    ArrayList<ChickenCoop> chickenCoops;
+    FarmHouse farmHouse;
 
     @Test
     public void constructorTest(){
         //Given
-        Farm farm = new Farm(new ArrayList<Stable>(), new ArrayList<ChickenCoop>(), new FarmHouse());
+        this.farm = new Farm(this.stables, this.chickenCoops, this.farmHouse);
 
         //Then
         Assert.assertNotNull(farm);
     }
-
 }
