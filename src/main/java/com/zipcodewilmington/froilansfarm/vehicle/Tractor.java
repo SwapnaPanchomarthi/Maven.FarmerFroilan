@@ -5,8 +5,11 @@ import com.zipcodewilmington.froilansfarm.util.Rideable;
 
 public class Tractor implements FarmVehicle {
 
+    public Tractor() {
+    }
+
     public String makeNoise() {
-        return null;
+        return "operating tractor";
     }
 
     public String ride(Rideable rideable) {
