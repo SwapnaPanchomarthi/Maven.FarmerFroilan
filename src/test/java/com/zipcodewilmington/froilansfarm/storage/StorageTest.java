@@ -55,7 +55,7 @@ public class StorageTest {
     public void addFarmerTest(){
         //Given
         this.farmHouse = new FarmHouse();
-        this.person = new Farmer();
+        this.person = new Farmer("Froilan", 10);
 
         //When
         farmHouse.add(person);
@@ -132,7 +132,7 @@ public class StorageTest {
     public void removeFarmerTest(){
         //Given
         this.farmHouse = new FarmHouse();
-        this.person = new Farmer();
+        this.person = new Farmer("Froilan", 10);
 
         //When
         farmHouse.add(person);
