@@ -62,6 +62,19 @@ public class ChickenTest {
 
     @Test
     public void yield() {
+        //Given
+        Chicken chicken = new Chicken( 15);
+
+
+        //When
+        Integer expected =15;
+        chicken.yield();
+        Integer actualYield = chicken.getEggCount();
+
+        //Then
+        Assert.assertEquals(expected, actualYield);
+
+
     }
 
     @Test
@@ -95,10 +108,51 @@ public class ChickenTest {
     }
 
     @Test
-    public void getHasBeenFertilized() {
+    public void getHasBeenFertilizedTrue() {
+
+        //Given
+        Chicken chicken = new Chicken( 3);
+
+        //When
+            chicken.setHasBeenFertilized(true);
+       boolean actual= chicken.getHasBeenFertilized();
+
+        //Then
+
+        Assert.assertTrue(actual);
+        System.out.println(actual);
+
     }
 
     @Test
+    public void getHasBeenFertilizedFalse() {
+
+        //Given
+        Chicken chicken = new Chicken( 3);
+
+        //When
+        chicken.setHasBeenFertilized(false);
+        boolean actual= chicken.getHasBeenFertilized();
+
+        //Then
+
+        Assert.assertFalse(actual);
+        System.out.println(actual);
+
+    }
+    @Test
     public void setHasBeenFertilized() {
+        //Given
+        Chicken chicken = new Chicken( 3);
+
+        //When
+        chicken.setHasBeenFertilized(true);
+        boolean actual= chicken.getHasBeenFertilized();
+
+        //Then
+
+        Assert.assertTrue(actual);
+        System.out.println(actual);
+
     }
 }

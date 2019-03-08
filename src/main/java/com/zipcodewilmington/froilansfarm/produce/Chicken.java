@@ -25,8 +25,7 @@ public class Chicken extends Animal implements Produce {
 
 
     public Boolean getHasBeenFertilized()
-    {   if(eggCount!=0)
-        hasBeenFertilized=true;
+    {
         return hasBeenFertilized;
     }
 
