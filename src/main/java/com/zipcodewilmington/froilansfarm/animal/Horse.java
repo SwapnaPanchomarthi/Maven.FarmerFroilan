@@ -17,12 +17,7 @@ public class Horse extends Animal implements Rideable {
     }
 
     public String makeNoise() {
-        return null;
-    }
-
-    public String ride() {
-
-        return null;
+        return "Neigh!";
     }
 
     public void setEnergy(Integer energy) {
@@ -39,5 +34,10 @@ public class Horse extends Animal implements Rideable {
 
     public String getName() {
         return this.name;
+    }
+
+    public String ride(Rideable rideable) {
+        this.energy -= 5;
+        return "You rode" + this.getName();
     }
 }

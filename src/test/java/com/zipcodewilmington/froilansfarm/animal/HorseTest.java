@@ -80,10 +80,31 @@ public class HorseTest {
     public void rideTest(){
         //Given
         this.horse = new Horse(null, null);
+        horse.setName("Seabiscuit");
         horse.setEnergy(10);
 
         //When
-        horse.ride();
-        String expected = "You rode " + horse.getName();
+        horse.ride(horse);
+        String actual = "You rode " + horse.getName();
+        Integer actualEnergy = horse.getEnergy();
+
+        //Then
+        String expected = "You rode Seabiscuit";
+        Integer expectedEnergy = 5;
+        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expectedEnergy, actualEnergy);
+    }
+
+    @Test
+    public void makeNoiseTest(){
+        //Given
+        this.horse = new Horse(null, null);
+
+        //When
+        String actual = horse.makeNoise();
+
+        //Then
+        String expected = "Neigh!";
+        Assert.assertEquals(expected, actual);
     }
 }
