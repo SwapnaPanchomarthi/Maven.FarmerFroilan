@@ -14,10 +14,10 @@ public class CropDuster extends Aircraft implements FarmVehicle {
     }
 
     public String fly() {
-        return "operating cropduster";
+        return "flying cropduster";
     }
 
     public String ride(Rideable rideable) {
-        return null;
+        return "riding cropduster";
     }
 }
