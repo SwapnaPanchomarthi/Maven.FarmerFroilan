@@ -10,7 +10,7 @@ import org.junit.Test;
 
 public class FarmerTest {
 
-    Farmer farmer =new Farmer(null, null);
+    Farmer farmer = Farmer.createFarmer(null, null);
 
     @Test
     public void plant() {
@@ -23,7 +23,7 @@ public class FarmerTest {
     @Test
     public void mount() {
         //Given
-        Rideable rideable = new Tractor();
+        Rideable rideable = Tractor.createTractor();
         String expected = "Farmer mounted "+rideable;
 
         //When
@@ -39,7 +39,7 @@ public class FarmerTest {
     public void dismount() {
 
         //Given
-        Rideable rideable = new Tractor();
+        Rideable rideable = Tractor.createTractor();
         String expected = "Farmer dismounted "+rideable;
 
         //When

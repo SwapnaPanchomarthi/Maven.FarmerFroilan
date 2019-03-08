@@ -9,7 +9,7 @@ public class TractorTest {
     @Test
     public void TractorConstructor() {
         // Given
-        Tractor tractor = new Tractor();
+        Tractor tractor = Tractor.createTractor();
         // Then
         Assert.assertNotNull(tractor);
     }
@@ -17,7 +17,7 @@ public class TractorTest {
     @Test
     public void makeNoiseTest() {
         // Given
-        Tractor tractor = new Tractor();
+        Tractor tractor = Tractor.createTractor();
         String expected = "operating tractor";
         // When
         String actual = tractor.makeNoise();
@@ -28,7 +28,7 @@ public class TractorTest {
     @Test
     public void rideTest() {
         // Given
-        Tractor tractor = new Tractor();
+        Tractor tractor = Tractor.createTractor();
         String expected = "riding tractor";
         // When
         String actual = tractor.ride(tractor);
