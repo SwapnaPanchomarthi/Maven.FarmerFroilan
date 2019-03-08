@@ -40,7 +40,7 @@ public class StorageTest {
     public void addChickenTest(){
         //Given
         this.chickenCoop = new ChickenCoop();
-        this.chicken = new Chicken();
+        this.chicken = new Chicken(10);
 
         //When
         chickenCoop.add(chicken);
@@ -116,7 +116,7 @@ public class StorageTest {
     public void removeChickenTest(){
         //Given
         this.chickenCoop = new ChickenCoop();
-        this.chicken = new Chicken();
+        this.chicken = new Chicken(10);
 
         //When
         chickenCoop.add(chicken);
