@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.animal;
 
+import com.zipcodewilmington.froilansfarm.produce.Egg;
 import com.zipcodewilmington.froilansfarm.produce.Tomato;
 import com.zipcodewilmington.froilansfarm.util.Edible;
 import org.junit.Assert;
@@ -22,5 +23,19 @@ public class PersonTest {
 
         // Then
         Assert.assertNull(actual);
+    }
+
+    @Test
+    public void eatTest(){
+        //Given
+        Person person = new Farmer(null, 10);
+        Egg egg = new Egg();
+
+        //When
+        String actual = person.eat(egg);
+
+        //Then
+        String expected = null + " ate " + egg;
+        Assert.assertEquals(expected, actual);
     }
 }
