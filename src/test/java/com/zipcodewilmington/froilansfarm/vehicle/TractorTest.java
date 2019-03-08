@@ -23,4 +23,15 @@ public class TractorTest {
         // Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void rideTest() {
+        // Given
+        Tractor tractor = new Tractor();
+        String expected = "riding tractor";
+        // When
+        String actual = tractor.ride(tractor);
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 }

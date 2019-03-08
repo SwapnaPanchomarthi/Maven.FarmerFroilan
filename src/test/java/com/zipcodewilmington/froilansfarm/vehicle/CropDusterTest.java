@@ -27,9 +27,20 @@ public class CropDusterTest {
     public void fly() {
         // Given
         CropDuster cropDuster = new CropDuster();
-        String expected = "operating cropduster";
+        String expected = "flying cropduster";
         // When
         String actual = cropDuster.fly();
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void rideTest() {
+        // Given
+        CropDuster cropDuster = new CropDuster();
+        String expected = "riding cropduster";
+        // When
+        String actual = cropDuster.ride(cropDuster);
         // Then
         Assert.assertEquals(expected, actual);
     }

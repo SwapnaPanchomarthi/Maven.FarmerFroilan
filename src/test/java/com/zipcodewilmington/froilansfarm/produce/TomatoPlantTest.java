@@ -11,10 +11,9 @@ public class TomatoPlantTest {
     public void yield() {
         // Given
         TomatoPlant tomatoPlant = new TomatoPlant();
-        Tomato expected = new Tomato();
         // When
         Tomato actual = tomatoPlant.yield();
         // Then
-        Assert.assertTrue(actual instanceof Tomato);
+        Assert.assertNotNull(actual);
     }
 }
