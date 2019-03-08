@@ -84,7 +84,7 @@ public class StorageTest {
     public void addCropTest(){
         //Given
         this.cropRow = new CropRow();
-        this.crop = new CornStalk();
+        this.crop = CornStalk.createCornStalk();
 
         //When
         cropRow.add(crop);
@@ -163,7 +163,7 @@ public class StorageTest {
     public void removeCropTest(){
         //Given
         this.cropRow = new CropRow();
-        this.crop = new CornStalk();
+        this.crop = CornStalk.createCornStalk();
 
         //When
         cropRow.add(crop);

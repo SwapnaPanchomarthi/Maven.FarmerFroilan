@@ -63,8 +63,8 @@ public class HorseTest {
     @Test
     public void eatTest(){
         //Given
-        this.horse = Horse.createHorse(null, null);
-        Edible earCorn = new EarCorn();
+        this.horse = new Horse(null, null);
+        Edible earCorn = EarCorn.createEarCorn();
         horse.setEnergy(10);
 
         //When

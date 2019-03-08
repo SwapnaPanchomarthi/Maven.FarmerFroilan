@@ -39,8 +39,8 @@ public class TractorTest {
     @Test
     public void harvestTest() {
         // Given
-        Tractor tractor = Tractor.createTractor();
-        Crop tomatoCrop = new TomatoPlant();
+        Tractor tractor = new Tractor();
+        Crop tomatoCrop = TomatoPlant.createTomatoPlant();
         // When
         Boolean actual = tractor.harvest(tomatoCrop);
         // Then
