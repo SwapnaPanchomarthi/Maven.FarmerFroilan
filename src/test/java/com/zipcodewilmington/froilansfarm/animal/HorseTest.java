@@ -64,7 +64,7 @@ public class HorseTest {
     public void eatTest(){
         //Given
         this.horse = new Horse(null, null);
-        Edible earCorn = new EarCorn();
+        Edible earCorn = EarCorn.createEarCorn();
         horse.setEnergy(10);
 
         //When

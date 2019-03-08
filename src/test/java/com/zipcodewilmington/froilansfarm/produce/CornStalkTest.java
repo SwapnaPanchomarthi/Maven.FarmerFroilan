@@ -1,10 +1,7 @@
 package com.zipcodewilmington.froilansfarm.produce;
 
-import com.zipcodewilmington.froilansfarm.util.Edible;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class CornStalkTest {
 
@@ -13,7 +10,7 @@ public class CornStalkTest {
     @Test
     public void yield() {
         //Given
-        this.cornStalk = new CornStalk();
+        this.cornStalk = CornStalk.createCornStalk();
         EarCorn earCorn;
 
         //When

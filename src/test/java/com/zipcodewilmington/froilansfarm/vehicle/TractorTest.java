@@ -2,7 +2,6 @@ package com.zipcodewilmington.froilansfarm.vehicle;
 
 import com.zipcodewilmington.froilansfarm.produce.Crop;
 import com.zipcodewilmington.froilansfarm.produce.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -41,7 +40,7 @@ public class TractorTest {
     public void harvestTest() {
         // Given
         Tractor tractor = new Tractor();
-        Crop tomatoCrop = new TomatoPlant();
+        Crop tomatoCrop = TomatoPlant.createTomatoPlant();
         // When
         Boolean actual = tractor.harvest(tomatoCrop);
         // Then

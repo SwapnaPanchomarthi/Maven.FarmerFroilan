@@ -6,7 +6,6 @@ import com.zipcodewilmington.froilansfarm.animal.Person;
 import com.zipcodewilmington.froilansfarm.produce.Chicken;
 import com.zipcodewilmington.froilansfarm.produce.CornStalk;
 import com.zipcodewilmington.froilansfarm.produce.Crop;
-import com.zipcodewilmington.froilansfarm.util.Edible;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -85,7 +84,7 @@ public class StorageTest {
     public void addCropTest(){
         //Given
         this.cropRow = new CropRow();
-        this.crop = new CornStalk();
+        this.crop = CornStalk.createCornStalk();
 
         //When
         cropRow.add(crop);
@@ -164,7 +163,7 @@ public class StorageTest {
     public void removeCropTest(){
         //Given
         this.cropRow = new CropRow();
-        this.crop = new CornStalk();
+        this.crop = CornStalk.createCornStalk();
 
         //When
         cropRow.add(crop);
