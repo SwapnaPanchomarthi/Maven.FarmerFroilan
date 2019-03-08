@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.vehicle;
 
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import org.junit.Assert;
