@@ -3,7 +3,6 @@ package com.zipcodewilmington.froilansfarm.produce;
 import com.zipcodewilmington.froilansfarm.animal.Animal;
 import com.zipcodewilmington.froilansfarm.util.Edible;
 import com.zipcodewilmington.froilansfarm.util.Produce;
-import sun.rmi.server.InactiveGroupException;
 
 public class Chicken extends Animal implements Produce {
     private Boolean hasBeenFertilized = false;
@@ -33,14 +32,6 @@ public class Chicken extends Animal implements Produce {
         this.hasBeenFertilized = hasBeenFertilized;
     }
 
-
-
-    public void eat(Edible edible) {
-        Integer numOfEggsConsumed = 10;
-        this.eggCount=numOfEggsConsumed+eggCount;
-
-    }
-
     public String makeNoise() {
 
         return "Cock-A-Doodle-Doo!";
@@ -51,5 +42,9 @@ public class Chicken extends Animal implements Produce {
 
 
         return edible;
+    }
+
+    public String eat(Edible edible) {
+        return null;
     }
 }
