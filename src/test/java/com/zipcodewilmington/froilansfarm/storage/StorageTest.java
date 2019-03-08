@@ -4,6 +4,9 @@ import com.zipcodewilmington.froilansfarm.animal.Farmer;
 import com.zipcodewilmington.froilansfarm.animal.Horse;
 import com.zipcodewilmington.froilansfarm.animal.Person;
 import com.zipcodewilmington.froilansfarm.produce.Chicken;
+import com.zipcodewilmington.froilansfarm.produce.CornStalk;
+import com.zipcodewilmington.froilansfarm.produce.Crop;
+import com.zipcodewilmington.froilansfarm.util.Edible;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,6 +14,9 @@ public class StorageTest {
     Stable stable;
     ChickenCoop chickenCoop;
     FarmHouse farmHouse;
+    Field field;
+    CropRow cropRow;
+    Crop crop;
     Horse horse;
     Chicken chicken;
     Person person;
@@ -55,9 +61,39 @@ public class StorageTest {
         farmHouse.add(person);
         Object actualPerson = farmHouse.get(0);
 
-        //When
+        //Then
         Object expectedPerson = person;
         Assert.assertEquals(expectedPerson, actualPerson);
+    }
+
+    @Test
+    public void addFieldTest(){
+        //Given
+        this.field = new Field();
+        this.cropRow = new CropRow();
+
+        //When
+        field.add(cropRow);
+        Object actualCropRow = field.get(0);
+
+        //Then
+        Object expectedCropRow = cropRow;
+        Assert.assertEquals(expectedCropRow, actualCropRow);
+    }
+
+    @Test
+    public void addCropTest(){
+        //Given
+        this.cropRow = new CropRow();
+        this.crop = new CornStalk();
+
+        //When
+        cropRow.add(crop);
+        Object actualCrop = cropRow.get(0);
+
+        //Then
+        Object expectedCrop = crop;
+        Assert.assertEquals(expectedCrop, actualCrop);
     }
 
     @Test
@@ -105,6 +141,38 @@ public class StorageTest {
 
         //Then
         Integer afterRemove = farmHouse.getSize();
+        Assert.assertNotEquals(beforeRemove, afterRemove);
+    }
+
+    @Test
+    public void removeCropRowTest(){
+        //Given
+        this.field = new Field();
+        this.cropRow = new CropRow();
+
+        //When
+        field.add(cropRow);
+        Integer beforeRemove = field.getSize();
+        field.remove(cropRow);
+
+        //Then
+        Integer afterRemove = field.getSize();
+        Assert.assertNotEquals(beforeRemove, afterRemove);
+    }
+
+    @Test
+    public void removeCropTest(){
+        //Given
+        this.cropRow = new CropRow();
+        this.crop = new CornStalk();
+
+        //When
+        cropRow.add(crop);
+        Integer beforeRemove = cropRow.getSize();
+        cropRow.remove(crop);
+
+        //Then
+        Integer afterRemove = cropRow.getSize();
         Assert.assertNotEquals(beforeRemove, afterRemove);
     }
 }
