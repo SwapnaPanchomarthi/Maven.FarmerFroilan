@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.produce.Edible;
 import com.zipcodewilmington.froilansfarm.produce.Tomato;
 import com.zipcodewilmington.froilansfarm.produce.TomatoPlant;
 import org.junit.Assert;
@@ -14,7 +13,7 @@ public class TomatoPlantTest {
         TomatoPlant tomatoPlant = new TomatoPlant();
         Tomato expected = new Tomato();
         // When
-        Edible actual = tomatoPlant.yield();
+        Tomato actual = tomatoPlant.yield();
         // Then
         Assert.assertTrue(actual instanceof Tomato);
     }

@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.produce;
 
 import com.zipcodewilmington.froilansfarm.animal.Animal;
+import com.zipcodewilmington.froilansfarm.util.Edible;
+import com.zipcodewilmington.froilansfarm.util.Produce;
 
 public class Chicken extends Animal implements Produce {
     private Boolean hasBeenFertilized = false;

@@ -1,6 +1,10 @@
 package com.zipcodewilmington.froilansfarm.vehicle;
 
-public class CropDuster extends Aircraft implements FarmVehicle{
+
+import com.zipcodewilmington.froilansfarm.util.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.util.Rideable;
+
+public class CropDuster extends Aircraft implements FarmVehicle {
 
     public CropDuster() {
     }
@@ -11,5 +15,9 @@ public class CropDuster extends Aircraft implements FarmVehicle{
 
     public String fly() {
         return "operating cropduster";
+    }
+
+    public String ride(Rideable rideable) {
+        return null;
     }
 }
