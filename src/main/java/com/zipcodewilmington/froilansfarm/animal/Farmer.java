@@ -1,19 +1,54 @@
 package com.zipcodewilmington.froilansfarm.animal;
 
 import com.zipcodewilmington.froilansfarm.produce.Crop;
-import com.zipcodewilmington.froilansfarm.vehicle.Rideable;
-import com.zipcodewilmington.froilansfarm.vehicle.Rider;
+import com.zipcodewilmington.froilansfarm.util.Botanist;
+import com.zipcodewilmington.froilansfarm.util.Edible;
+import com.zipcodewilmington.froilansfarm.util.Rideable;
+import com.zipcodewilmington.froilansfarm.util.Rider;
 
 public class Farmer extends Person implements Rider, Botanist {
+    String name;
+    Integer energy;
+
+    public Farmer(String name, Integer energy){
+        this.name = name;
+        this.energy = energy;
+    }
+
     public void plant(Crop crop) {
+        crop.plant();
 
     }
 
-    public void mount(Rideable rideable) {
+    public String mount(Rideable rideable) {
+
+     return "Farmer mounted "+rideable;
 
     }
 
-    public void dismount(Rideable rideable) {
+    public String dismount(Rideable rideable) {
+        return "Farmer dismounted "+rideable;
 
+    }
+
+    public String eat(Edible edible){
+        energy += 10;
+        return name + " ate " + edible;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getEnergy() {
+        return energy;
+    }
+
+    public void setEnergy(Integer energy) {
+        this.energy = energy;
     }
 }
