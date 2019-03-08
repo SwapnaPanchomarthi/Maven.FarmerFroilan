@@ -32,8 +32,15 @@ public class ChickenTest {
     public void eat() {
         //Given
         Chicken chicken = new Chicken( 10);
-        
+        Edible edible = new Egg();
+        Integer expected = 20;
         //When
+        chicken.eat(edible);
+        Integer actual = chicken.getEggCount();
+
+        //Then
+        Assert.assertEquals(expected, actual);
+
 
 
     }
