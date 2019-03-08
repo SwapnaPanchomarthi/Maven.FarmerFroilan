@@ -1,5 +1,10 @@
 package com.zipcodewilmington.froilansfarm.vehicle;
 
+import com.zipcodewilmington.froilansfarm.produce.Crop;
+import com.zipcodewilmington.froilansfarm.produce.Tomato;
+import com.zipcodewilmington.froilansfarm.produce.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.storage.CropRow;
+import com.zipcodewilmington.froilansfarm.storage.Storage;
 import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import org.junit.Assert;
 import org.junit.Test;
@@ -18,7 +23,8 @@ public class CropDusterTest {
         // Given
         CropDuster cropDuster = new CropDuster();
         // When
-        Boolean fertilized = cropDuster.fertilize();
+        CropRow tomatoPlantCrop = new CropRow();
+        Boolean fertilized = cropDuster.fertilize(tomatoPlantCrop);
         // Then
         Assert.assertTrue(fertilized);
     }
