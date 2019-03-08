@@ -12,6 +12,10 @@ public class Horse extends Animal implements Rideable {
         this.energy = energy;
     }
 
+    public static Horse createHorse(String name, Integer energy) {
+        return new Horse(name, energy);
+    }
+
     public String eat(Edible edible) {
         this.energy += 10;
         return name + " ate " + edible;

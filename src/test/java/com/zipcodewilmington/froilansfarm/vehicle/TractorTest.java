@@ -2,7 +2,6 @@ package com.zipcodewilmington.froilansfarm.vehicle;
 
 import com.zipcodewilmington.froilansfarm.produce.Crop;
 import com.zipcodewilmington.froilansfarm.produce.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,7 +9,7 @@ public class TractorTest {
     @Test
     public void TractorConstructor() {
         // Given
-        Tractor tractor = new Tractor();
+        Tractor tractor = Tractor.createTractor();
         // Then
         Assert.assertNotNull(tractor);
     }
@@ -18,7 +17,7 @@ public class TractorTest {
     @Test
     public void makeNoiseTest() {
         // Given
-        Tractor tractor = new Tractor();
+        Tractor tractor = Tractor.createTractor();
         String expected = "operating tractor";
         // When
         String actual = tractor.makeNoise();
@@ -29,7 +28,7 @@ public class TractorTest {
     @Test
     public void rideTest() {
         // Given
-        Tractor tractor = new Tractor();
+        Tractor tractor = Tractor.createTractor();
         String expected = "riding tractor";
         // When
         String actual = tractor.ride(tractor);
@@ -41,7 +40,7 @@ public class TractorTest {
     public void harvestTest() {
         // Given
         Tractor tractor = new Tractor();
-        Crop tomatoCrop = new TomatoPlant();
+        Crop tomatoCrop = TomatoPlant.createTomatoPlant();
         // When
         Boolean actual = tractor.harvest(tomatoCrop);
         // Then

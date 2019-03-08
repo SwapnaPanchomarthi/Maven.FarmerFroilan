@@ -6,7 +6,6 @@ import com.zipcodewilmington.froilansfarm.animal.Person;
 import com.zipcodewilmington.froilansfarm.produce.Chicken;
 import com.zipcodewilmington.froilansfarm.produce.CornStalk;
 import com.zipcodewilmington.froilansfarm.produce.Crop;
-import com.zipcodewilmington.froilansfarm.util.Edible;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -25,7 +24,7 @@ public class StorageTest {
     public void addHorseTest() {
         //Given
         this.stable = new Stable();
-        this.horse = new Horse("Seabiscuit", 10);
+        this.horse = Horse.createHorse("Seabiscuit", 10);
 
         //When
         stable.add(horse);
@@ -40,7 +39,7 @@ public class StorageTest {
     public void addChickenTest(){
         //Given
         this.chickenCoop = new ChickenCoop();
-        this.chicken = new Chicken(10);
+        this.chicken = Chicken.createChicken(10);
 
         //When
         chickenCoop.add(chicken);
@@ -55,7 +54,7 @@ public class StorageTest {
     public void addFarmerTest(){
         //Given
         this.farmHouse = new FarmHouse();
-        this.person = new Farmer("Froilan", 10);
+        this.person = Farmer.createFarmer("Froilan", 10);
 
         //When
         farmHouse.add(person);
@@ -85,7 +84,7 @@ public class StorageTest {
     public void addCropTest(){
         //Given
         this.cropRow = new CropRow();
-        this.crop = new CornStalk();
+        this.crop = CornStalk.createCornStalk();
 
         //When
         cropRow.add(crop);
@@ -100,7 +99,7 @@ public class StorageTest {
     public void removeHorseTest() {
         //Given
         this.stable = new Stable();
-        this.horse = new Horse("Seabiscuit", 10);
+        this.horse = Horse.createHorse("Seabiscuit", 10);
 
         //When
         stable.add(horse);
@@ -116,7 +115,7 @@ public class StorageTest {
     public void removeChickenTest(){
         //Given
         this.chickenCoop = new ChickenCoop();
-        this.chicken = new Chicken(10);
+        this.chicken = Chicken.createChicken(10);
 
         //When
         chickenCoop.add(chicken);
@@ -132,7 +131,7 @@ public class StorageTest {
     public void removeFarmerTest(){
         //Given
         this.farmHouse = new FarmHouse();
-        this.person = new Farmer("Froilan", 10);
+        this.person = Farmer.createFarmer("Froilan", 10);
 
         //When
         farmHouse.add(person);
@@ -164,7 +163,7 @@ public class StorageTest {
     public void removeCropTest(){
         //Given
         this.cropRow = new CropRow();
-        this.crop = new CornStalk();
+        this.crop = CornStalk.createCornStalk();
 
         //When
         cropRow.add(crop);

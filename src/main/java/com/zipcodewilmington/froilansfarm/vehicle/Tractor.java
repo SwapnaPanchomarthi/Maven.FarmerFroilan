@@ -9,6 +9,10 @@ public class Tractor implements FarmVehicle {
     public Tractor() {
     }
 
+    public static Tractor createTractor() {
+        return new Tractor();
+    }
+
     public String makeNoise() {
         return "operating tractor";
     }
@@ -21,7 +25,4 @@ public class Tractor implements FarmVehicle {
     public boolean harvest(Crop crop) {
         return true;
     }
-
-
-
 }

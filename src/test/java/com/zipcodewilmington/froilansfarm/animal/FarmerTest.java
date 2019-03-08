@@ -3,21 +3,18 @@ package com.zipcodewilmington.froilansfarm.animal;
 import com.zipcodewilmington.froilansfarm.produce.Crop;
 import com.zipcodewilmington.froilansfarm.produce.Egg;
 import com.zipcodewilmington.froilansfarm.produce.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.util.Produce;
 import com.zipcodewilmington.froilansfarm.util.Rideable;
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class FarmerTest {
 
-    Farmer farmer =new Farmer(null, null);
+    Farmer farmer = Farmer.createFarmer(null, null);
 
     @Test
     public void plant() {
-        Crop crop = new TomatoPlant();
+        Crop crop = TomatoPlant.createTomatoPlant();
         farmer.plant(crop);
 
         Assert.assertTrue(crop.isPlanted());
@@ -26,7 +23,7 @@ public class FarmerTest {
     @Test
     public void mount() {
         //Given
-        Rideable rideable = new Tractor();
+        Rideable rideable = Tractor.createTractor();
         String expected = "Farmer mounted "+rideable;
 
         //When
@@ -42,7 +39,7 @@ public class FarmerTest {
     public void dismount() {
 
         //Given
-        Rideable rideable = new Tractor();
+        Rideable rideable = Tractor.createTractor();
         String expected = "Farmer dismounted "+rideable;
 
         //When

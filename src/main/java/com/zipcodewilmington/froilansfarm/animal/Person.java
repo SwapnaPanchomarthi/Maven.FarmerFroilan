@@ -10,6 +10,6 @@ public abstract class Person extends Animal implements NoiseMaker, Eater {
     }
 
     public String eat(Edible edible) {
-        return new Farmer(null, null) + " ate " + edible;
+        return Farmer.createFarmer(null, null) + " ate " + edible;
     }
 }
