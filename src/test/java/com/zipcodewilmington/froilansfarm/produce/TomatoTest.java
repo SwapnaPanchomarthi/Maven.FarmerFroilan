@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.produce;
 
 import com.zipcodewilmington.froilansfarm.produce.Tomato;
 import org.junit.Assert;
