@@ -13,7 +13,7 @@ public class Tractor implements FarmVehicle {
     }
 
     public String ride(Rideable rideable) {
-        return null;
+        return "riding tractor";
     }
 
 
