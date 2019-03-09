@@ -12,7 +12,7 @@ public class ChickenTest {
     @Test
     public void inheritanceTest() {
 
-        Animal chicken = Chicken.createChicken(null);
+        Animal chicken = Chicken.createChicken();
 
         Assert.assertTrue(chicken instanceof Animal);
 
@@ -21,7 +21,7 @@ public class ChickenTest {
      @Test
     public void implementationTest() {
 
-        Produce chicken = (Produce) (Object) Chicken.createChicken(null);
+        Produce chicken = (Produce) (Object) Chicken.createChicken();
 
         Assert.assertTrue(chicken instanceof Produce);
     }
@@ -29,7 +29,7 @@ public class ChickenTest {
     //@Test
     public void eat() {
         //Given
-        Chicken chicken = Chicken.createChicken( 10);
+        Chicken chicken = Chicken.createChicken( );
         Edible edible = new Egg();
         Integer expected = 20;
         //When
@@ -46,7 +46,7 @@ public class ChickenTest {
     @Test
     public void makeNoise() {
         //Given
-        Chicken chicken = Chicken.createChicken( 11);
+        Chicken chicken = Chicken.createChicken( );
         String expected = "Cock-A-Doodle-Doo!";
 
         //When
@@ -61,7 +61,7 @@ public class ChickenTest {
     @Test
     public void yield() {
         //Given
-        Chicken chicken = Chicken.createChicken( 15);
+        Chicken chicken = Chicken.createChicken( );
 
 
         //When
@@ -79,7 +79,7 @@ public class ChickenTest {
     public void setEggCount() {
 
         //Given
-        Chicken chicken = Chicken.createChicken( 10);
+        Chicken chicken = Chicken.createChicken( );
 
 
         //When
@@ -95,7 +95,7 @@ public class ChickenTest {
     @Test
     public void getEggCount() {
         //Given
-        Chicken chicken = Chicken.createChicken( 11);
+        Chicken chicken = Chicken.createChicken( );
         Integer expected =11;
         //When
         Integer actual=  chicken.getEggCount();
@@ -109,7 +109,7 @@ public class ChickenTest {
     public void getHasBeenFertilizedTrue() {
 
         //Given
-        Chicken chicken = Chicken.createChicken( 3);
+        Chicken chicken = Chicken.createChicken( );
 
         //When
             chicken.setHasBeenFertilized(true);
@@ -126,7 +126,7 @@ public class ChickenTest {
     public void getHasBeenFertilizedFalse() {
 
         //Given
-        Chicken chicken = Chicken.createChicken( 3);
+        Chicken chicken = Chicken.createChicken( );
 
         //When
         chicken.setHasBeenFertilized(false);
@@ -141,7 +141,7 @@ public class ChickenTest {
     @Test
     public void setHasBeenFertilized() {
         //Given
-        Chicken chicken = Chicken.createChicken( 3);
+        Chicken chicken = Chicken.createChicken( );
 
         //When
         chicken.setHasBeenFertilized(true);
