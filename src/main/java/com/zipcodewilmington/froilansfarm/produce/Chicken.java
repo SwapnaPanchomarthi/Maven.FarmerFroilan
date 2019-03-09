@@ -8,14 +8,14 @@ public class Chicken extends Animal implements Produce {
     private Boolean hasBeenFertilized = false;
     Integer eggCount;
 
-    private Chicken(Integer eggCount)
+    private Chicken()
     {
-        this.eggCount = eggCount;
+
 
     }
 
-    public static Chicken createChicken(Integer eggCount) {
-        return new Chicken(eggCount);
+    public static Chicken createChicken() {
+        return new Chicken();
     }
 
     public void setEggCount(Integer eggCount) {
