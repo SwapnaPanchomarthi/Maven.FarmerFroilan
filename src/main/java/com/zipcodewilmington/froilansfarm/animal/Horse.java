@@ -1,7 +1,12 @@
 package com.zipcodewilmington.froilansfarm.animal;
 
+import com.zipcodewilmington.froilansfarm.produce.Chicken;
 import com.zipcodewilmington.froilansfarm.util.Edible;
 import com.zipcodewilmington.froilansfarm.util.Rideable;
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Horse extends Animal implements Rideable {
     String name;
@@ -12,8 +17,13 @@ public class Horse extends Animal implements Rideable {
         this.energy = energy;
     }
 
-    public static Horse createHorse(String name, Integer energy) {
-        return new Horse(name, energy);
+    public Horse() {
+    }
+
+    public static ArrayList<Horse> horsesArrayList(Integer numberOfHorses) {
+        return (ArrayList<Horse>) Stream.generate(Horse::new)
+                .limit(numberOfHorses)
+                .collect(Collectors.toList());
     }
 
     public String eat(Edible edible) {

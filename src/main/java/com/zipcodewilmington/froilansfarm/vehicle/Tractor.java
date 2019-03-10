@@ -22,7 +22,7 @@ public class Tractor implements FarmVehicle {
     }
 
 
-    public boolean harvest(Crop crop) {
+    public boolean harvest(Crop<Crop> crop) {
         return true;
     }
 }

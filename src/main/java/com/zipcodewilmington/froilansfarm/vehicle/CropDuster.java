@@ -8,7 +8,7 @@ import com.zipcodewilmington.froilansfarm.util.Rideable;
 public class CropDuster extends Aircraft implements FarmVehicle {
 
 
-    private CropDuster() {
+    public CropDuster() {
     }
 
     public static CropDuster createCropDuster() {

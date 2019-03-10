@@ -8,6 +8,6 @@ public class EarCorn implements Edible {
         return new EarCorn();
     }
 
-    private EarCorn() {
+    public EarCorn() {
     }
 }
