@@ -10,7 +10,8 @@ public class Farm {
     public FarmHouse farmHouse;
     public ChickenCoop chickenCoop;
 
-    public Farm(ArrayList<Stable> stables, ArrayList<ChickenCoop> chickenCoops, FarmHouse farmHouse) {
+    public Farm(ArrayList<Stable> stables, ArrayList<ChickenCoop> chickenCoops, FarmHouse farmHouse)
+    {
         this.chickenCoops = chickenCoops;
         this.stables = stables;
         this.farmHouse = farmHouse;
