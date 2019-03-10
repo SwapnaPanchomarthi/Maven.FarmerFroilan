@@ -4,19 +4,30 @@ import com.zipcodewilmington.froilansfarm.animal.Animal;
 import com.zipcodewilmington.froilansfarm.util.Edible;
 import com.zipcodewilmington.froilansfarm.util.Produce;
 
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class Chicken extends Animal implements Produce {
     private Boolean hasBeenFertilized = false;
     Integer eggCount;
 
-    private Chicken()
+    public Chicken()
     {
 
 
     }
 
-    public static Chicken createChicken() {
-        return new Chicken();
+    public static ArrayList<Chicken> chickenArrayList(Integer numberOfChickens) {
+        return (ArrayList<Chicken>) Stream.generate(Chicken::new)
+                .limit(numberOfChickens)
+                .collect(Collectors.toList());
     }
+
+//    public static Chicken createChicken() {
+//        return new Chicken();
+//    }
+
 
     public void setEggCount(Integer eggCount) {
         this.eggCount = eggCount;

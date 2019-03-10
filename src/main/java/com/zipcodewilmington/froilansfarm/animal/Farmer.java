@@ -10,7 +10,7 @@ public class Farmer extends Person implements Rider, Botanist {
     String name;
     Integer energy;
 
-    private Farmer(String name, Integer energy){
+    public Farmer(String name, Integer energy){
         this.name = name;
         this.energy = energy;
     }
@@ -19,7 +19,7 @@ public class Farmer extends Person implements Rider, Botanist {
         return new Farmer(name, energy);
     }
 
-    public void plant(Crop crop) {
+    public void plant(Crop<Crop> crop) {
         crop.plant();
 
     }
